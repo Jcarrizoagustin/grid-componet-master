@@ -6,3 +6,89 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* Colors */ 
+  --cyan: hsl(179, 62%, 43%);
+  --yellow: hsl(71, 73%, 54%);
+  --gray: hsl(204, 43%, 93%);
+  --gray_blue: hsl(218, 22%, 67%);
+  /* Font */
+  --font: 'Karla', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card--container {
+  max-width: 90%;
+  width: 800px;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "community community"
+                       "subscription why-us";
+
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.community {
+  grid-area: community;
+  padding: 2.5em;
+}
+
+.community__title {
+  color: var(--cyan);
+  margin-bottom: 1.25em;
+}
+.community__subtitle{
+  color: var(--yellow);
+  margin-bottom: calc(1.25em/2);
+}
+.community__description {
+  color: var(--gray_blue);
+  margin-right:10em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.subscription {
+  background-color: var(--cyan);
+
+  padding: 2.5em;
+  color: var(--gray);
+
+  
+}
+
+.subscription__title {
+  margin-bottom: 1.25em;
+ 
+}
+
+.money {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem
+}
+
+.grey {
+  font-size: .4em;
+  display: inline-block;
+  margin-left: 25px;
+  
+
+}
+
+
+
