@@ -23,6 +23,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #e6eff6;
 }
 
 .card--container {
@@ -35,13 +36,15 @@ body {
   grid-template-areas: "community community"
                        "subscription why-us";
 
-  border: 1px solid black;
+  
   border-radius: 10px;
+  box-shadow: 3px 3px 20px grey;
 }
 
 .community {
   grid-area: community;
   padding: 2.5em;
+  background-color: white;
 }
 
 .community__title {
@@ -79,7 +82,7 @@ body {
   font-weight: 700;
   display: flex;
   align-items: center;
-  margin-bottom: 1.25rem
+  margin-bottom: .5rem;
 }
 
 .grey {
@@ -89,6 +92,57 @@ body {
   
 
 }
+
+.subscription__description {
+  margin-bottom: 1.25rem;
+}
+
+.subscription__btn {
+  width: calc(100% - 40px);
+  font-family: var(--font);
+  font-weight: 700;
+  color: white;
+  border: none;
+  background-color: var(--yellow);
+  font-size:  1rem;
+  padding: 1.125em 0;
+  border-radius: 7px;
+}
+
+.us {
+  color: white;
+  background-color: hsl(179, 47%, 52%);
+  padding: 2.5em;
+}
+
+.us__title {
+  margin-bottom: 1.25em;
+}
+
+.us__list {
+  list-style: none;
+}
+
+.us__item {
+  color: var(--gray);
+  font-size:  0.875rem;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 775px){
+  .card--container {
+    max-width: 375px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .community__description {
+    margin-right: 0;
+  }
+}
+
+
 
 
 
